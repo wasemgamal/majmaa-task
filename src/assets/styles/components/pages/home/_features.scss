@@ -1,0 +1,7 @@
+@import '../../../core/variables';
+.features {
+    margin-block: 70px;
+    @media (min-width: $breakpoint-md) {
+        margin-top: -100px;
+    }
+}

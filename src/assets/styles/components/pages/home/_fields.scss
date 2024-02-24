@@ -1,0 +1,9 @@
+@import '../../../core/variables';
+.fields {
+    background-image: url('@/assets/img/svg/fields-bg.svg');
+    background-position: bottom 0 left 0;
+    background-size:auto 100%;
+    .feature_box{
+        @include prefixes(box-shadow, none !important);
+    }
+}

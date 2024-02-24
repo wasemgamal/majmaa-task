@@ -1,0 +1,39 @@
+@import "./core/variables";
+@import "./core/fonts";
+
+:root{
+
+    --primaryColor: #{$primaryColor};
+    --secondaryColor: #{$secondaryColor};
+    --fontGrey: #{$fontGrey};
+    --white: #{$white};
+    --black: #{$black};
+    --colorSet1: #{$colorSet1};
+    --colorSet2: #{$colorSet2};
+    --colorSet3: #{$colorSet3};
+    --colorSet4: #{$colorSet4};
+    --colorSet5: #{$colorSet5};
+    --colorSet6: #{$colorSet6};
+
+    --fontLight: #{$fontLight};
+    --fontExtraLight: #{$fontExtraLight};
+    --fontBlack: #{$fontBlack};
+    --fontBold: #{$fontBold};
+    --fontExtraBold: #{$fontExtraBold};
+    --fontMedium: #{$fontMedium};
+    --fontRegular: #{$fontRegular};
+    --transition: #{$transition};
+    --primaryColorFilter: #{$primaryColorFilter};
+    --whiteColorFilter: #{$whiteColorFilter};
+
+    --breakpoint-sm: #{$breakpoint-sm};
+    --breakpoint-md: #{$breakpoint-md};
+    --breakpoint-lg: #{$breakpoint-lg};
+    --breakpoint-xl: #{$breakpoint-xl};
+    --breakpoint-xxl: #{$breakpoint-xxl};
+
+}
+
+
+@import "./core/global";
+@import "./components/all-components.scss";

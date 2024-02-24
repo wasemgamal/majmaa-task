@@ -1,0 +1,46 @@
+@import '../../../core/variables';
+
+.active_courses {
+    position: relative;
+
+    &::before {
+        @include absolute-position(0, 0, 100%, 212px);
+        background: url('@/assets/img/svg/active-courses-curve.svg') no-repeat;
+    }
+
+    .dotts_up{
+        @include dotted-bg('#{lighten($fontGrey, 30)}', 2, 220px, 85px);
+        top: 0;
+        left: 0;
+    }
+    .dotts_down{
+        @include dotted-bg('#{lighten($fontGrey, 30)}', 2, 220px, 75px);
+        bottom: 0%;
+        right:0%;
+    }
+
+    .carousel {
+        .carousel__slide{
+            text-align: start;
+        }
+        .carousel__pagination-button {
+            &::after {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: lighten($color: $fontGrey, $amount: 25);
+            }
+
+            &.carousel__pagination-button--active {
+                &::after {
+                    background-color: lighten($color: $fontGrey, $amount: 10);
+                }
+            }
+
+            
+        }
+        .carousel__pagination {
+            margin-top: 70px;
+        }
+    }
+}

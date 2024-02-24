@@ -1,0 +1,19 @@
+@import '../../../core/variables';
+.about_section {
+    @include gr-tr(180deg, $white, $fontGrey, 55, 11);
+    background-image: url('@/assets/img/svg/about-bg.svg');
+    background-position: bottom 0 left 0;
+    .about_image{
+        position: relative;
+        &::before{
+            @include dotted-bg('#{lighten($fontGrey, 30)}', 2, 250px, 85px);
+            top: -40px;
+            right: 0;
+        }
+        &::after{
+            @include dotted-bg('#{lighten($fontGrey, 30)}', 2, 75px, 250px);
+            top: 31%;
+            left: -62px;
+        }
+    }
+}

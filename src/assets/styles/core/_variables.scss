@@ -1,0 +1,84 @@
+$white: #FFFFFF;
+$black: #000000;
+$fontGrey: #999999;
+$primaryColor: #DEA701;
+$secondaryColor: #186D4A;
+$colorSet1: #FFFAEB;
+$colorSet2: #FFF4E8;
+$colorSet3: #EDFCF2;
+$colorSet4: #FAFAFA;
+$colorSet5: #F1FCFF;
+$colorSet6: #FDFFF4;
+$fontLight: 'TLight';
+$fontExtraLight: 'TExtraLight';
+$fontRegular: 'TRegular';
+$fontMedium: 'TMedium';
+$fontExtraBold: 'TExtraBold';
+$fontBold: 'TBold';
+$fontBlack: 'TBlack';
+$fontExtraLight: 'TExtraLight';
+$transition: all 1s ease-in-out;
+$primaryColorFilter: invert(40%) sepia(86%) saturate(1460%) hue-rotate(190deg) brightness(99%) contrast(93%);
+$whiteColorFilter: brightness(0) invert(1);
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+@mixin transition($i) {
+    transition: all $i ease-in-out;
+}
+
+@mixin transparency($color,$j) {
+    background-color: rgba($color, $j) !important;
+}
+
+@mixin fontawesome($icon) {
+    position: absolute;
+    content: '#{$icon}';
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Free';
+}
+
+@mixin gr-tr($dir, $color1, $color2, $k:ff, $l:ff) {
+    background: -webkit-linear-gradient($dir, #{$color1}#{$k}, #{$color2}#{$l});
+    background: -webkit-linear-gradient($dir, #{$color1}#{$k}, #{$color2}#{$l});
+    background: -moz-linear-gradient($dir, #{$color1}#{$k}, #{$color2}#{$l});
+    background: -ms-linear-gradient($dir, #{$color1}#{$k}, #{$color2}#{$l});
+    background: -o-linear-gradient($dir, #{$color1}#{$k}, #{$color2}#{$l});
+    background: linear-gradient($dir, #{$color1}#{$k}, #{$color2}#{$l});
+}
+
+@mixin prefixes($property, $attributes) {
+    -webkit-#{$property}: $attributes;
+    -moz-#{$property}: $attributes;
+    -ms-#{$property}: $attributes;
+    -o-#{$property}: $attributes;
+    #{$property}: #{$attributes};
+}
+
+@mixin dotted-bg($hexColor, $dotRadius: 3, $width: 180px, $height: 160px) {
+	position: absolute;
+	content: '';
+	width: $width;
+	height: $height;
+	$color: '%23' + str-slice(quote($hexColor), 2); // encode color
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='transparent'/%3E%3Ccircle cx='50%25' cy='50%25' r='#{$dotRadius}' fill='#{$color}'/%3E%3C/svg%3E%0A");
+}
+
+%transition {
+    transition: $transition;
+}
+
+@mixin absolute-position($top: 0, $right: 0, $width: 100%, $height: 100%){
+    position: absolute;
+    content: '';
+    top: #{$top};
+    right: #{$right};
+    width: #{$width};
+    height: #{$height}; 
+}
+
+

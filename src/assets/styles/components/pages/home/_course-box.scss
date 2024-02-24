@@ -1,0 +1,9 @@
+@import '../../../core/variables';
+.course_box {
+    border-radius: 25px 0 25px 0;
+    position: relative;
+    label{
+        top: 30px;
+        left: 20px;
+    }
+}

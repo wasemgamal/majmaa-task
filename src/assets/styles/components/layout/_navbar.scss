@@ -1,0 +1,10 @@
+@import '../../core/variables';
+.navbar{
+    .navbar-collapse{
+        @media(max-width: $breakpoint-sm){
+            background-color: $primaryColor !important;
+            padding: 10px;
+            z-index: 2;
+        }
+    }
+}

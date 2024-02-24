@@ -1,0 +1,8 @@
+@import '../../../core/variables';
+.feature_box {
+    @extend .border_radius__20;
+    @include prefixes(box-shadow, 0 10px 20px rgba($black, .13));
+    p{
+        color: var(--fontGrey);
+    }
+}

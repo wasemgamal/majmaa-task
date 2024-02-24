@@ -1,0 +1,18 @@
+@import '../../../core/variables';
+.recent_courses {
+    position: relative;
+    &::before{
+        @include absolute-position(0 , 0, 100%, 212px);
+        background: url('@/assets/img/svg/recent-curve.svg') no-repeat;
+    }
+    .dotts_up{
+        @include dotted-bg('#{lighten($secondaryColor, 50)}', 2, 220px, 85px);
+        top: 0;
+        left: 0;
+    }
+    .dotts_down{
+        @include dotted-bg('#{lighten($secondaryColor, 50)}', 2, 75px, 220px);
+        bottom: 0;
+        right: -6%;
+    }
+}

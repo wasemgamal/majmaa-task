@@ -1,0 +1,18 @@
+@import '../../../core/variables';
+.activities {
+    position: relative;
+    &::before{
+        @include absolute-position(calc(100% - 212px) , 0, 100%, 212px);
+        background: url('@/assets/img/svg/activities-curve.svg') no-repeat;
+    }
+    .dotts_up{
+        @include dotted-bg('#{lighten($primaryColor, 30)}', 2, 220px, 85px);
+        top: 0;
+        left: 0;
+    }
+    .dotts_down{
+        @include dotted-bg('#{lighten($primaryColor, 30)}', 2, 75px, 220px);
+        bottom: 0;
+        right: -6%;
+    }
+}
