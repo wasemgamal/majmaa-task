@@ -2,8 +2,9 @@
 .activities {
     position: relative;
     &::before{
-        @include absolute-position(calc(100% - 212px) , 0, 100%, 212px);
+        @include absolute-position(calc(100% - 500px) , 0, 100%, 500px);
         background: url('@/assets/img/svg/activities-curve.svg') no-repeat;
+        background-size: cover;
     }
     .dotts_up{
         @include dotted-bg('#{lighten($primaryColor, 30)}', 2, 220px, 85px);

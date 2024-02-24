@@ -2,8 +2,9 @@
 .recent_courses {
     position: relative;
     &::before{
-        @include absolute-position(0 , 0, 100%, 212px);
+        @include absolute-position(0 , 0, 100%, 500px);
         background: url('@/assets/img/svg/recent-curve.svg') no-repeat;
+        background-size: cover;
     }
     .dotts_up{
         @include dotted-bg('#{lighten($secondaryColor, 50)}', 2, 220px, 85px);

@@ -3,6 +3,7 @@
     @include gr-tr(180deg, $white, $fontGrey, 55, 11);
     background-image: url('@/assets/img/svg/about-bg.svg');
     background-position: bottom 0 left 0;
+    background-size: cover;
     .about_image{
         position: relative;
         &::before{
